@@ -9,3 +9,9 @@ def imperative_urls(states)
   urls
 end
 p imperative_urls(states)
+
+# urls: Functional version
+def functional_urls(states)
+  states.map { |state| state.downcase.split.join('-') }
+end
+puts functional_urls(states).inspect
