@@ -32,3 +32,18 @@ def exercise_of_map(states)
   urls
 end
 puts exercise_of_map(states).inspect
+
+
+#SELECT
+#
+
+def imperative_singles(states)
+  singles = []
+  states.each do |state|
+    if state.split.length == 1
+      singles << state
+    end
+  end
+  singles
+end
+puts imperative_singles(states).inspect
