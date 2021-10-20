@@ -85,3 +85,30 @@ def imperative_sum(numbers)
   total
 end
 puts imperative_sum(numbers)
+
+#sum: functional version
+def functional_sum(numbers)
+  numbers.reduce { |total, n| total + n }
+end
+puts functional_sum(numbers)
+
+#Reduce, second example:
+
+# lengths: Imperative version
+def imperative_lengths(states)
+  lengths = {}
+  states.each do |state|
+    lengths[state] = state.length
+  end
+  lengths
+end
+puts imperative_lengths(states)
+
+def functional_lengths(states)
+  states.reduce({}) do |lengths, state|
+    lengths[state] = state.length
+    lengths
+  end
+end
+puts functional_lengths(states)
+
