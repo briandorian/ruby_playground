@@ -53,3 +53,17 @@ def functional_singles(states)
   states.select { |state| state.split.length == 1 }
 end
 puts functional_singles(states).inspect
+
+#
+# Exercise
+# Write two select functions that return the Dakotas: one using String#include?
+# (Section 2.5) to test for the presence of the string “Dakota” and one that tests
+# for the length of the split array being 2.
+#
+
+def exercise_select_one(states)
+  states.select { |state| state.include?('Dakota') }
+end
+puts exercise_select_one(states).inspect
+
+
