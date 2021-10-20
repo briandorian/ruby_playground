@@ -66,4 +66,8 @@ def exercise_select_one(states)
 end
 puts exercise_select_one(states).inspect
 
+def exercise_select_two(states)
+  states.select { |state| state.split.length == 2 }
+end
+puts exercise_select_two(states).inspect
 
