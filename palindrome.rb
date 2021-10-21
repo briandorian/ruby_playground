@@ -14,8 +14,8 @@ end
 # returns a LOUDER (all-caps) version of the content. Confirm in the REPL
 # that the result appears as in Listing 7.8.
 
-
-  class Phrase
+# < is how Ruby indicates that Phrase inherits from String class
+  class Phrase < String
   attr_accessor :content
   def initialize(content)
     @content = content
@@ -23,7 +23,8 @@ end
 
   #returns true if palindrome, false if not.
   def palindrome?
-    processed_content = self.content.downcase
+    #because a phrase is a string, self is a string, which means we can call the downcase method directly.
+    processed_content = self.downcase
     processed_content == processed_content.reverse
   end
 
