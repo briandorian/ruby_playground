@@ -1,9 +1,5 @@
 
-#returns true if palindrome, false if not.
-def palindrome?(string)
-  processed_content = string.downcase
-  processed_content == processed_content.reverse
-end
+
 
 def email_parts(string)
   mail_before_point = string.partition(".")
@@ -15,11 +11,20 @@ def email_parts(string)
 end
 
 
+
+
 class Phrase
   attr_accessor :content
   def initialize(content)
     @content = content
   end
+
+  #returns true if palindrome, false if not.
+  def palindrome?
+    processed_content = self.content.downcase
+    processed_content == processed_content.reverse
+  end
+
 end
 
 phrase = Phrase.new("Madam, I'm Adam")
