@@ -10,10 +10,12 @@ def email_parts(string)
   "Test #{first_part} - #{server_mail} - #{domain_mail}"
 end
 
+# By filling in the code in Listing 7.7, add a louder method to the Phrase object that
+# returns a LOUDER (all-caps) version of the content. Confirm in the REPL
+# that the result appears as in Listing 7.8.
 
 
-
-class Phrase
+  class Phrase
   attr_accessor :content
   def initialize(content)
     @content = content
@@ -25,6 +27,9 @@ class Phrase
     processed_content == processed_content.reverse
   end
 
+  def louder
+    self.content.upcase
+  end
 end
 
 phrase = Phrase.new("Madam, I'm Adam")
