@@ -13,3 +13,15 @@ def email_parts(string)
 
   "Test #{first_part} - #{server_mail} - #{domain_mail}"
 end
+
+
+class Phrase
+  attr_accessor :content
+  def initialize(content)
+    @content = content
+  end
+end
+
+phrase = Phrase.new("Madam, I'm Adam")
+puts phrase.content
+
