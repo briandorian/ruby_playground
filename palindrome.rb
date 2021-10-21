@@ -16,12 +16,7 @@ end
 
 # < is how Ruby indicates that Phrase inherits from String class
   class Phrase < String
-  attr_accessor :content
-  def initialize(content)
-    @content = content
-  end
-
-  #returns true if palindrome, false if not.
+    #returns true if palindrome, false if not.
   def palindrome?
     #because a phrase is a string, self is a string, which means we can call the downcase method directly.
     processed_content = self.downcase
