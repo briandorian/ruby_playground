@@ -25,3 +25,5 @@ end
 phrase = Phrase.new("Madam, I'm Adam")
 puts phrase.content
 
+phrase.content = "Able was I, ere I saw Elba."
+puts phrase.content
