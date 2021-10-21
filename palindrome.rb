@@ -10,16 +10,18 @@ def email_parts(string)
   "Test #{first_part} - #{server_mail} - #{domain_mail}"
 end
 
-# By filling in the code in Listing 7.7, add a louder method to the Phrase object that
-# returns a LOUDER (all-caps) version of the content. Confirm in the REPL
-# that the result appears as in Listing 7.8.
 
 # < is how Ruby indicates that Phrase inherits from String class
   class Phrase < String
     #returns true if palindrome, false if not.
   def palindrome?
-    #because a phrase is a string, self is a string, which means we can call the downcase method directly.
-    processed_content = self.downcase
+
+    # Inside a Ruby class, the use of self. is necessary when making attribute assignments,
+    # but otherwise you can leave it off. In particular, confirm that we can write downcase
+    # in place of self.downcase, as shown in Listing 7.11. This may look a little odd at first,
+    # but the practice of leaving off self. when possible is common in idiomatic Ruby.
+
+    processed_content = downcase
     processed_content == processed_content.reverse
   end
 
@@ -27,9 +29,3 @@ end
     self.content.upcase
   end
 end
-
-phrase = Phrase.new("Madam, I'm Adam")
-puts phrase.content
-
-phrase.content = "Able was I, ere I saw Elba."
-puts phrase.content
