@@ -39,4 +39,10 @@ class TranslatedPhrase < Phrase
     super(content)
     @translation = translation
   end
+  # overriding
+  # Processes the translation for palindrome testing.
+  def processed_content
+    self.translation.downcase
+  end
+
 end
