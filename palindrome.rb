@@ -31,7 +31,7 @@ end
 
 class TranslatedPhrase < Phrase
   attr_accessor :translation
-  def initialize(translation)
+  def initialize(content,translation)
 
     # This calls the initialize method for the superclass—in this case, Ruby looks for one in Phrase,
     # but Phrase has no initialize, so Ruby keeps going up the class hierarchy until it finds one in the String class.
