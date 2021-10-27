@@ -1,4 +1,4 @@
-class Phrase < String
+class String
 
   # Returns content for palindrome testing.
   def processed_content
