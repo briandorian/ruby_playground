@@ -1,7 +1,4 @@
-require './integer_palindrome.rb'
-require './string_palindrome.rb'
-
-module Palindrome
+class Integer
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -12,6 +9,6 @@ module Palindrome
 
   # Returns content for palindrome testing.
   def processed_content
-    self.to_s.downcase
+    self.to_s
   end
 end
